@@ -11,12 +11,11 @@ RUN apt-get update && \
     apt-get install -y wget
 
 # Download and install jetty
-ENV JETTY_VERSION 9.4.3
-ENV RELEASE_DATE v20170317
-RUN wget http://download.eclipse.org/jetty/stable-9/dist/jetty-distribution-${JETTY_VERSION}.${RELEASE_DATE}.tar.gz && \
-    tar -xzvf jetty-distribution-${JETTY_VERSION}.${RELEASE_DATE}.tar.gz && \
-    rm -rf jetty-distribution-${JETTY_VERSION}.${RELEASE_DATE}.tar.gz && \
-    mv jetty-distribution-${JETTY_VERSION}.${RELEASE_DATE}/ /opt/jetty
+ENV JETTY_VERSION 9.4.3v20170317
+RUN wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/${JETTY_VERSION}/jetty-distribution-${JETTY_VERSION}.tar.gz && \
+    tar -xzvf jetty-distribution-${JETTY_VERSION}.tar.gz && \
+    rm -rf jetty-distribution-${JETTY_VERSION}.tar.gz && \
+    mv jetty-distribution-${JETTY_VERSION}/ /opt/jetty
 
 # Configure Jetty user and clean up install
 RUN useradd jetty && \
@@ -26,3 +25,4 @@ RUN useradd jetty && \
 # Set defaults for docker run
 WORKDIR /opt/jetty
 CMD ["java", "-jar", "start.jar", "jetty.home=/opt/jetty"]
+
