@@ -11,11 +11,10 @@ RUN apt-get update && \
     apt-get install -y wget
 
 # Download and install jetty
-ENV JETTY_VERSION 9.4.3v20170317
-RUN wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/${JETTY_VERSION}/jetty-distribution-${JETTY_VERSION}.tar.gz && \
-    tar -xzvf jetty-distribution-${JETTY_VERSION}.tar.gz && \
-    rm -rf jetty-distribution-${JETTY_VERSION}.tar.gz && \
-    mv jetty-distribution-${JETTY_VERSION}/ /opt/jetty
+RUN wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/9.4.3.v20170317/jetty-distribution-9.4.3.v20170317.tar.gz && \
+    tar -xzvf jetty-distribution-9.4.3.v20170317.tar.gz && \
+    rm -rf jetty-distribution-9.4.3.v20170317.tar.gzz && \
+    mv jetty-distribution-9.4.3.v20170317/ /opt/jetty
 
 # Configure Jetty user and clean up install
 RUN useradd jetty && \
