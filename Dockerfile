@@ -25,9 +25,6 @@ RUN useradd jetty && \
 
 EXPOSE 80
 
-# Set defaults for docker run
-WORKDIR /opt/jetty
-
 ADD run.sh /usr/local/bin/run.sh
 CMD ["bash", "/usr/local/bin/run.sh"]
 
