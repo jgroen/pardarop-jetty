@@ -8,7 +8,9 @@ ADD Dockerfile /etc/Dockerfile
 # Install packages
 RUN apt-get update && \ 
     apt-get update --fix-missing && \ 
-    apt-get install -y wget
+    apt-get install -y \
+    wget \
+    iptables 
 
 # Download and install jetty
 RUN wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/9.4.3.v20170317/jetty-distribution-9.4.3.v20170317.tar.gz && \
@@ -25,6 +27,8 @@ EXPOSE 80
 
 # Set defaults for docker run
 WORKDIR /opt/jetty
+
+ADD run.sh /usr/local/bin/run.sh
 CMD ["bash", "/usr/local/bin/run.sh"]
 
 
