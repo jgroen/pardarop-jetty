@@ -21,7 +21,10 @@ RUN useradd jetty && \
     chown -R jetty:jetty /opt/jetty && \
     rm -rf /opt/jetty/webapps.demo
 
+EXPOSE 80
+
 # Set defaults for docker run
 WORKDIR /opt/jetty
 CMD ["java", "-jar", "start.jar", "jetty.home=/opt/jetty"]
+
 
