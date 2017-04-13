@@ -24,6 +24,7 @@ RUN useradd jetty && \
     rm -rf /opt/jetty/webapps.demo
 
 EXPOSE 80
+EXPOSE 8080
 
 ADD run.sh /usr/local/bin/run.sh
 CMD ["bash", "/usr/local/bin/run.sh"]
