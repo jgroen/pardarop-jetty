@@ -25,6 +25,7 @@ EXPOSE 80
 
 # Set defaults for docker run
 WORKDIR /opt/jetty
-CMD ["java", "-jar", "start.jar", "jetty.home=/opt/jetty"]
+CMD ["bash", "/usr/local/bin/run.sh"]
+
 
 
