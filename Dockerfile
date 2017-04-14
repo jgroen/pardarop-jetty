@@ -19,8 +19,8 @@ RUN wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/9.
 
 # Configure Jetty user and clean up install
 RUN useradd jetty && \
-    chown -R jetty:jetty /opt/jetty
-    #rm -rf /opt/jetty/webapps.demo
+    chown -R jetty:jetty /opt/jetty && \
+    rm -rf /opt/jetty/webapps.demo
 
 #EXPOSE 8443
 EXPOSE 8080
