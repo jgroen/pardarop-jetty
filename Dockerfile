@@ -1,5 +1,4 @@
-FROM java:8-jdk
-MAINTAINER Nicholas Iaquinto <nickiaq@gmail.com>
+FROM openjdk:9
 
 # In case someone loses the Dockerfile
 RUN rm -rf /etc/Dockerfile
