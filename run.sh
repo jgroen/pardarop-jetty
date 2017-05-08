@@ -4,8 +4,10 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 iperf3 -s -D
 iperf3 -s -p 5202 -D
 
-cd /opt/jetty
-java -jar start.jar jetty.home=/opt/jetty
+#cd /opt/jetty
+#java -jar start.jar jetty.home=/opt/jetty
+
+java.exe -jar mobJettyServer.jar ./opt2/
     
 while true; do
     sleep 300
