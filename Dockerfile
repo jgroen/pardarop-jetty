@@ -13,7 +13,7 @@ RUN apt-get update && \
     iperf3
     
 # Download the video
-RUN wget -r http://52.37.177.82/opt2/
+RUN wget -r --no-parent http://52.37.177.82/opt2/
 
 # Download and install jetty
 RUN wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/9.4.3.v20170317/jetty-distribution-9.4.3.v20170317.tar.gz && \
