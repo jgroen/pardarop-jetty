@@ -33,7 +33,7 @@ EXPOSE 5201
 EXPOSE 5202
 
 ADD run.sh /usr/local/bin/run.sh
-ADD mobJettyServer.jar /home/ubuntu/
+ADD mobJettyServer.jar mobJettyServer.jar
 CMD ["bash", "/usr/local/bin/run.sh"]
 
 
