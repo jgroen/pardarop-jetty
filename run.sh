@@ -7,7 +7,7 @@ iperf3 -s -p 5202 -D
 #cd /opt/jetty
 #java -jar start.jar jetty.home=/opt/jetty
 
-java.exe -jar mobJettyServer.jar ./opt2/
+java-jar mobJettyServer.jar ./opt2/
     
 while true; do
     sleep 300
