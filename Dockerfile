@@ -13,7 +13,7 @@ RUN apt-get update && \
     iperf3
     
 # Download the video
-RUN wget -r --no-parent http://52.37.177.82/opt2/
+#RUN wget -r --no-parent http://52.37.177.82/opt2/
 #RUN wget http://52.37.177.82/cut.mp4 -O cut.mp4
 
 # Download and install jetty
@@ -34,6 +34,7 @@ EXPOSE 5202
 
 ADD run.sh /usr/local/bin/run.sh
 ADD mobJettyServer.jar mobJettyServer.jar
+ADD opt2 files/
 CMD ["bash", "/usr/local/bin/run.sh"]
 
 
