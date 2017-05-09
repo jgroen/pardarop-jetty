@@ -13,7 +13,7 @@ RUN apt-get update && \
     iperf3
     
 # Download the video
-RUN wget -r --no-parent http://52.37.177.82/opt2/ -P /files/opt2
+RUN wget -r --no-parent http://52.37.177.82/opt2/
 #RUN wget http://52.37.177.82/cut.mp4 -O cut.mp4
 
 # Download and install jetty
