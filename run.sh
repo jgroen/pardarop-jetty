@@ -7,7 +7,7 @@ iperf3 -s -p 5202 -D
 #cd /opt/jetty
 #java -jar start.jar jetty.home=/opt/jetty
 
-mv ./opt2 ./files/opt2
+mv /opt2 /files/opt2
 
 java -jar mobJettyServer.jar ./ 8080
     
