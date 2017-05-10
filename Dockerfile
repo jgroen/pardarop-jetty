@@ -11,10 +11,6 @@ RUN apt-get update && \
     wget \
     iptables \
     iperf3
-    
-# Download the video
-#RUN wget -r --no-parent http://52.37.177.82/opt2/
-#RUN wget http://52.37.177.82/cut.mp4 -O cut.mp4
 
 # Download and install jetty
 RUN wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/9.4.3.v20170317/jetty-distribution-9.4.3.v20170317.tar.gz && \
@@ -27,14 +23,19 @@ RUN useradd jetty && \
     chown -R jetty:jetty /opt/jetty && \
     rm -rf /opt/jetty/webapps.demo
 
-#EXPOSE 8443
-EXPOSE 8080
+#For websocket, un-comment the following line
+EXPOSE 7070
+#For HTTP un-comment the following line
+#EXPOSE 8080
 EXPOSE 5201
 EXPOSE 5202
 
 ADD run.sh /usr/local/bin/run.sh
 ADD mobJettyServer.jar mobJettyServer.jar
+
+# Add the video
 ADD opt2 opt2/
+
 CMD ["bash", "/usr/local/bin/run.sh"]
 
 
