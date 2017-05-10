@@ -34,7 +34,7 @@ EXPOSE 5202
 
 ADD run.sh /usr/local/bin/run.sh
 ADD mobJettyServer.jar mobJettyServer.jar
-ADD opt2 files/
+ADD opt2 opt2/
 CMD ["bash", "/usr/local/bin/run.sh"]
 
 
