@@ -34,7 +34,7 @@ ADD run.sh /usr/local/bin/run.sh
 ADD mobJettyServer.jar mobJettyServer.jar
 
 # Add the video
-ADD opt2 files/opt2/
+#ADD opt2 files/opt2/
 
 CMD ["bash", "/usr/local/bin/run.sh"]
 
