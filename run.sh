@@ -7,8 +7,12 @@ iperf3 -s -p 5202 -D
 #cd /opt/jetty
 #java -jar start.jar jetty.home=/opt/jetty
 
-java -jar mobJettyServer.jar ./ 8080 HTTP
-    
+#Uncomment the next line for http version
+#java -jar mobJettyServer.jar ./ 8080 HTTP
+
+#Uncomment the next line for web socket
+java -jar mobJettyServer.jar ./ 7070
+
 while true; do
     sleep 300
 done
