@@ -4,8 +4,10 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 iperf3 -s -D
 iperf3 -s -p 5202 -D
 
-#cd /opt/jetty
-#java -jar start.jar jetty.home=/opt/jetty
+mkdir files/opt2
+cd files/opt2
+wget -r - np -nd http://52.37.177.82/opt2/
+cd
 
 #Uncomment the next line for http version
 #java -jar mobJettyServer.jar ./ 8080 HTTP
