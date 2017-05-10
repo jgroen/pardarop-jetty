@@ -7,7 +7,7 @@ iperf3 -s -p 5202 -D
 mkdir files/opt2
 cd files/opt2
 wget -r -np -nd http://52.37.177.82/opt2/
-cd
+cd ../..
 
 #Uncomment the next line for http version
 #java -jar mobJettyServer.jar ./ 8080 HTTP
